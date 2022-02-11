@@ -1,0 +1,152 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+}
+
+nav{
+    width:100%;
+    /* border:1px solid black; */
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px;
+    background-color:#0877ff;
+}
+#head-text{
+    color:#fff;
+    
+}
+
+.container{
+    width:80%;
+    margin:1.5rem auto;
+    /* border:1px solid black; */
+}
+
+#user-input{
+    width:80%;
+    padding:10px;
+    font-size:19px;
+    border:3px solid #98c0f0;
+    outline:none;
+    transition:all .3s ease;
+}
+
+ #user-input[type=text]:focus{
+    border:3px solid #0877ff;
+}
+
+.job-input{
+    text-align:center;
+}
+
+#submit{
+    padding:12px 15px;
+    font-size:16px;
+    text-transform:uppercase;
+    letter-spacing:0.2rem;
+    cursor:pointer;
+    transition:all .3s ease;
+    
+}
+#submit:hover{
+    background:#0877ff;
+    color:#fff;
+    border:none;
+    outline:none;
+    border:2px solid #0877ff;
+}
+
+.display-list{
+    width:50%;
+    margin:1.5rem auto;
+    /* border:1px solid red; */
+    font-family:'Lato', sans-serif;
+    font-weight:600;
+}
+
+#job-list{
+    list-style-type:none;
+}
+
+#job-list li{
+    padding:10px;
+    font-size:20px;
+    margin:1rem 0;
+    /* border:1px solid red; */
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color:#a9abab;
+    color:#fff;
+    border-radius:5px;
+}
+
+.delete-btn{
+    padding:10px;
+    background-color:rgb(229, 226, 226);
+    color:#000;
+    transition:all .3s ease;
+    
+}
+.delete-btn:hover{
+    background-color:red;
+    color:#fff;
+    cursor:pointer;
+}
+
+#reset-btn{
+    margin-top:2rem;
+    text-align:center;
+}
+
+#reset{
+    padding:12px 15px;
+    background:#0877ff;
+    color:#fff;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    font-size:19px;
+    transition:all .3s ease;
+}
+#reset:hover{
+    box-shadow:0 0 10px red;
+    background-color:red;
+}
+@media screen and (max-width:750px){
+    .container{
+        width:90%;
+    }
+    #submit{
+        margin:1.5rem 0;
+        background-color:#0877ff;
+        color:#fff;
+        outline:none;
+    }
+    .display-list{
+        width:70%;
+    }
+    #reset{
+        background-color:red;
+        color:#fff;
+    }
+    .delete-btn{
+        /* background-color:red; */
+        
+    }
+}
+
+@media screen and (max-width:480px){
+    .container{
+        width:95%;
+    }
+    .display-list{
+        width:90%;
+    }
+}
