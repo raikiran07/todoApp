@@ -18,6 +18,8 @@ function addJob(){
         li.innerHTML = job.value;
         li.append(span);
         jobList.append(li);
+        job.value = '';
+        
         // job.value = 'Enter task';
         // job.style.color = "#8c8c8c";
     }
@@ -33,8 +35,9 @@ function addJob(){
 }
 
 function resetAll(){
-    jobs = [];
-    jobList.innerHTML = ' ';
+    // jobs = [];
+    // jobList.innerHTML = ' ';
+    location.reload();
 }
 
 //DELETING ITEMS
