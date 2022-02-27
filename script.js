@@ -3,6 +3,7 @@ const job = document.getElementById("user-input");
 const jobList = document.getElementById("job-list");
 const subBtn = document.getElementById("submit");
 const resetBtn = document.getElementById("reset");
+// const body = document.querySelector(".body");
 
 let jobs = [];
 let span;
@@ -47,4 +48,11 @@ function deleteItem(){
 
 subBtn.addEventListener("click",addJob);
 resetBtn.addEventListener("click",resetAll);
-span.addEventListener("click",deleteItem);
+// span.addEventListener("click",deleteItem);
+
+
+document.addEventListener("keypress",e=>{
+    if(e.key==='Enter'){
+        addJob();
+    }
+})
