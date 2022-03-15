@@ -93,18 +93,34 @@ nav{
     color:#fff;
     border-radius:5px;
 }
+.action-icons{
+ 
+}
 
-.delete-btn{
+.delete-btn, .correct-btn{
     padding:10px;
-    background-color:rgb(229, 226, 226);
+    /* background-color:rgb(229, 226, 226); */
     color:#000;
     transition:all .3s ease;
+    margin-right:0;
+    text-decoration:none !important;
+    
     
 }
 .delete-btn:hover{
     background-color:red;
     color:#fff;
     cursor:pointer;
+}
+.correct-btn:hover{
+    background-color:greenyellow;
+    color:#fff;
+    cursor:pointer;
+
+}
+.done > p{
+    text-decoration:line-through;
+    /* color:#fff; */
 }
 
 #reset-btn{

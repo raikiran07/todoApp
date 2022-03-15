@@ -7,17 +7,32 @@ const resetBtn = document.getElementById("reset");
 
 let jobs = [];
 let span;
+let done;
+let divEle;
 
 function addJob(){
     if(job.value != ''){
         job.value = job.value.replace(job.value[0],job.value[0].toUpperCase());
         jobs.push(job.value);
         const li = document.createElement("li");
-         span = document.createElement("span");
-        span.innerHTML = "delete";
+        //div element 
+        divEle = document.createElement("div");
+        divEle.className = "action-icons";
+       
+        //tick mark
+        done = document.createElement("span");
+        done.innerHTML = "✅";
+        done.className = "correct-btn";
+        divEle.append(done);
+
+        span = document.createElement("span");
+        span.innerHTML = "❎";
         span.className = "delete-btn";
-        li.innerHTML = job.value;
-        li.append(span);
+        li.innerHTML = `<p>${job.value}</p>`;
+        divEle.append(span);
+
+        
+        li.appendChild(divEle);
         jobList.append(li);
         job.value = '';
         
@@ -30,9 +45,11 @@ function addJob(){
 
     console.log(jobs);
 
-   
+   console.log(done);
+   console.log(span);
 
     span.addEventListener("click",deleteItem,false);
+    done.addEventListener("click",workDone,false);
 }
 
 function resetAll(){
@@ -43,7 +60,13 @@ function resetAll(){
 
 //DELETING ITEMS
 function deleteItem(){
-    this.parentNode.remove();
+    this.parentNode.parentNode.remove();
+    // jobList.remove(this.parentNode);
+}
+
+function workDone(){
+    this.parentNode.parentNode.className="done";
+    
 }
 
 subBtn.addEventListener("click",addJob);
@@ -56,3 +79,4 @@ document.addEventListener("keypress",e=>{
         addJob();
     }
 })
+
